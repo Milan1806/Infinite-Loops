@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .state{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .enquiry-form {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            padding-right: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+        }
+        .enquiry-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .enquiry-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .enquiry-form input,
+        .enquiry-form select,
+        .enquiry-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .enquiry-form textarea {
+            resize: vertical;
+        }
+        .enquiry-form button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .enquiry-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="enquiry-form">
+        <h2>Enquiry Form</h2>
+        <form action="/submit_enquiry" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone No.:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="" disabled selected>Select your state</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Assam">Assam</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Goa">Goa</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                
+             
+            </select>
+
+            <label for="crop">Crop:</label>
+            <input type="text" id="crop" name="crop" required>
+
+            <label for="message-about">What is your message about:</label>
+            <input type="text" id="message-about" name="message-about" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
