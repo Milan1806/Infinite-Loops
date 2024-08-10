@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register - Fasal Clone</title>
+    <style>
+        /* Auth Section */
+        .auth-section {
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            height: calc(100vh - 160px); /* Adjust height based on header and footer size */
+        }
+
+        .auth-container {
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .form-container {
+            display: none;
+        }
+
+        .form-container.active {
+            display: block;
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .input-group input:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+
+        .auth-container .btn {
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        .btn-secondary {
+            background-color: #007bff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0069d9;
+        }
+
+        /* Links */
+        .toggle-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .toggle-link a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-buttons">
+            <a href="#" class="btn btn-primary" id="login-btn">Login</a>
+            <a href="#" class="btn btn-secondary" id="register-btn">Register</a>
+        </div>
+    </header>
+
+    <!-- Login & Register Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div class="form-container active" id="login-container">
+                <h1>Login to Your Account</h1>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <p class="toggle-link">Don't have an account? <a href="#" id="show-register">Register here</a>.</p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="form-container" id="register-container">
+                <h1>Create a New Account</h1>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <input type="password" id="register-confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Register</button>
+                </form>
+                <p class="toggle-link">Already have an account? <a href="#" id="show-login">Login here</a>.</p>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Internal JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('login-btn');
+            const registerBtn = document.getElementById('register-btn');
+            const loginContainer = document.getElementById('login-container');
+            const registerContainer = document.getElementById('register-container');
+            const showRegisterLink = document.getElementById('show-register');
+            const showLoginLink = document.getElementById('show-login');
+
+            // Show login form and hide register form by default
+            loginContainer.classList.add('active');
+            registerContainer.classList.remove('active');
+
+            // Toggle to register form
+            registerBtn.addEventListener('click', function() {
+                loginContainer.classList.remove('active');
+                registerContainer.classList.add('active');
+            });
+
+            // Toggle to login form
+            loginBtn.addEventListener('click', function() {
+                registerContainer.classList.remove('active');
+                loginContainer.classList.add('active');
+            });
+
+            // Toggle using links
+            showRegisterLink.addEventListener('click', function() {
+                loginContainer.classList.remove('active');
+                registerContainer.classList.add('active');
+            });
+
+            showLoginLink.addEventListener('click', function() {
+                registerContainer.classList.remove('active');
+                loginContainer.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

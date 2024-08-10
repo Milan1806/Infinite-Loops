@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasal Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="#">Fasal</a>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Products</a>
+            <a href="#">Technology</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="header-buttons">
+            <a href="login.html" class="btn btn-primary">Login/Signup</a>
+        </div>
+    </header>
+    <style>
+        .slider {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: auto;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <img class="slider-images" src="img1.jpeg" alt="Image 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img class="slider-images" src="img2.jpeg" alt="Image 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img class="slider-images" src="img3.jpeg" alt="Image 3">
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide">
+            <img class="slider-images" src="img4.jpeg" alt="Image 4">
+        </div>
+        <!-- Slide 5 -->
+        <div class="slide">
+            <img class="slider-images" src="img5.jpeg" alt="Image 5">
+        </div>
+    </div>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        const slides = document.querySelectorAll(".slide");
+        if (n >= slides.length) {
+            slideIndex = 0;
+        }
+        if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${-100 * slideIndex}%)`;
+        });
+    }
+</script>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="txt">Empowering Farmers with Data-Driven Decisions</h1>
+            <p class="txt">Fasal is an agri-tech platform that helps farmers make informed decisions with the power of data.</p>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="Disease & pest prediction.png" alt="Feature 1">
+            <h2>Disease & pest prediction</h2>
+            <p>Get alerts for risk of disease and pest</p>
+        </div>
+        <div class="feature">
+            <img src="Irrigation alerts.png" alt="Feature 2">
+            <h2>Irrigation alerts</h2>
+            <p>Manage irrigation precisely by optimising the usage of water</p>
+        </div>
+        <div class="feature">
+            <img src="Microclimatic forecast.jpeg" alt="Feature 3">
+            <h2>Microclimatic forecast</h2>
+            <p>Get farm level weather forecast with high accuracy</p>
+        </div>
+        <div class="feature">
+            <img src="Manage farm.png" alt="Feature 3">
+            <h2>Manage farm</h2>
+            <p>Manage and monitor your finances</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <a href="#">Fasal</a>
+            </div>
+        </div>
+        <p>&copy; 2024 Fasal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
