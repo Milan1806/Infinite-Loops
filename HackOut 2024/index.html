@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fasal Clone</title>
+    <title>AgroInnovate</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <a href="#">Fasal</a>
+            <a href="#">AgroInnovate</a>
         </div>
         <nav class="nav-links">
             <a href="#">Home</a>
@@ -29,7 +29,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="txt">Empowering Farmers with Data-Driven Decisions</h1>
-            <p class="txt">Fasal is an agri-tech platform that helps farmers make informed decisions with the power of data.</p>
+            <p class="txt">AgroInnovate is an agri-tech platform that helps farmers make informed decisions with the power of data.</p>
             <a href="get_started.html" class="btn btn-primary">Get Started</a>
         </div>
     </section>
@@ -68,11 +68,17 @@
             margin-top: -22px;
             color: white;
             background-color: black;
-            border: 5px solid black;
+            border: 2px solid black;
             font-weight: bold;
             font-size: 18px;
             cursor: pointer;
             user-select: none;
+            transition: background-color 0.3s;
+            transition: color 0.3s;
+        }
+        .prev:hover,.next:hover{
+            background-color: white;
+            color: black;
         }
 
         .prev {
@@ -160,7 +166,8 @@
             <p>Manage and monitor your finances</p>
         </div>
     </section>
-    <center><h1>Fasal's impact so far</h1></center>
+    
+    <center><h1>AgroInnovate's impact so far</h1></center>
     <section class="editional-info">
         <div class="feature">
             <img src="impact1.png" alt="Feature 3">
@@ -181,11 +188,46 @@
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <div class="logo">
-                <a href="#">Fasal</a>
+            <div class="footer-section about">
+                <h2 class="logo-text">AgroInnovate</h2>
+                <p>
+                    AgroInnovate is a platform that helps farmers with smart agricultural solutions, using AI and IoT to improve productivity and sustainability.
+                </p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big">
+                        <i class="fas fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
             </div>
         </div>
-        <p>&copy; 2024 Fasal. All rights reserved.</p>
+    
+        <div class="footer-bottom">
+            &copy; 2024 AgroInnovate. All rights reserved. | Designed by AgroInnovate Team
+        </div>
     </footer>
+    
 </body>
 </html>

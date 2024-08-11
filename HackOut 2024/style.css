@@ -125,35 +125,103 @@ header .nav-links a:hover {
     padding: 50px 20px;
     background-color: #f9f9f9;
 }
-/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    background-color: #3b3b3b; /* Dark brown */
+    color: #f4f4f4; /* Light cream */
+    padding: 30px 0;
+    font-family: 'Arial', sans-serif;
 }
 
-footer .footer-content {
+.footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
 }
 
-footer .footer-content .logo a {
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none;
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.logo-text {
+    font-size: 2em;
     font-weight: bold;
+    color: #8bc34a; /* Earthy green */
 }
 
-footer .footer-links a {
-    color: #fff;
-    margin: 0 15px;
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #e0e0e0; /* Light grey */
+}
+
+.socials a {
+    margin-right: 10px;
+    color: #8bc34a; /* Earthy green */
+    font-size: 1.2em;
+}
+
+.footer-section.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section.links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+    color: #f4f4f4; /* Light cream */
     text-decoration: none;
-    font-size: 16px;
+    transition: color 0.3s;
 }
 
-footer p {
-    font-size: 14px;
+.footer-section.links ul li a:hover {
+    color: #8bc34a; /* Earthy green */
+}
+
+.footer-section.contact-form .contact-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #575757; /* Medium brown */
+    color: #f4f4f4; /* Light cream */
+}
+
+.btn {
+    background-color: #8bc34a; /* Earthy green */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #689f38; /* Darker green */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #2e2e2e; /* Darker brown */
+    color: #f4f4f4; /* Light cream */
+    font-size: 0.9em;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom a {
+    color: #8bc34a; /* Earthy green */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #689f38; /* Darker green */
 }
